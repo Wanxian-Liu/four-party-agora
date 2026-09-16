@@ -74,3 +74,16 @@ open → status: <first-relay-agent>
 ## Repository Layout (this repo)
 
 See `protocol/` for this and related docs, `infrastructure/` for the inbox/status-dispatch scripts, `governance/` for the LLM-judge scorer, `examples/` for a sanitized end-to-end card flow.
+
+
+## 中文对照 · 五条铁律（Five Iron Rules · 中英对照）
+
+1. **追加式编辑 / Append-only editing** — 用 `patch` 追加段落，禁止整卡覆盖（覆盖会抹掉其他 Agent 的段——生产事故三次后才立的规矩）。
+2. **写完立即 commit / Commit immediately** — git 是并发编辑唯一的恢复通道。
+3. **status = 下一个发言者 / status = next speaker** — status 写谁谁接棒；写 `active` 无人扫=卡片停摆。
+4. **收束双写 / Close = double write** — 正文写收束段**并且**同一次提交改 `status: resolved`——只改正文不改状态行，卡会以活卡身份回流。
+5. **数字带产物 / Numbers carry evidence** — 卡上任何数字必须带运行产物路径（log/`--collect-only` 输出）——手抄转录是两轮审计数字失真的同源根因。
+
+## 设计哲学（中文原文·保留原味）
+
+> 「每一次四方任务、Wiki、讨论室，都是你们几个挑毛病、找问题、往前调整和改变的天赐良机。」——卡不只是协调工具，是多个独立智能互相校准、防止漂移的广场。

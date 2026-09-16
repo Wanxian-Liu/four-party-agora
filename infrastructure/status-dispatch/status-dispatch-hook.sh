@@ -53,10 +53,10 @@ commit_sha = sys.argv[5] if len(sys.argv) > 5 else "unknown"
 
 # owner → inbox 路径映射（CR7 Dependency Direction：固定映射表·禁广播）
 OWNER_INBOX = {
-    "agent-a": "$HOME/.fpc/data/buzz-inbox-agent-a.jsonl",
-    "agent-b":   "$HOME/.fpc/data/buzz-inbox-agent-b.jsonl",
-    "agent-c":    "$HOME/.fpc/data/buzz-inbox-agent-c.jsonl",
-    "agent-d":     "$HOME/.fpc/data/buzz-inbox-agent-d.jsonl",
+    "agent-a": "$HOME/.agora/data/buzz-inbox-agent-a.jsonl",
+    "agent-b":   "$HOME/.agora/data/buzz-inbox-agent-b.jsonl",
+    "agent-c":    "$HOME/.agora/data/buzz-inbox-agent-c.jsonl",
+    "agent-d":     "$HOME/.agora/data/buzz-inbox-agent-d.jsonl",
 }
 # hermes 永远收一份（orchestrator 追踪）
 HERMES_INBOX = OWNER_INBOX["hermes"]

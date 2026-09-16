@@ -21,9 +21,9 @@ AGENT = os.environ.get("AGENT_NAME", "openclaw")
 AGENT_ID = AGENT_MAP.get(AGENT, AGENT)  # 未知 agent: 默认用 AGENT_NAME 让 openclaw 自己报错
 
 # ── Config (all paths overridable via env — self-host friendly) ──
-BASE_DIR = os.environ.get("FPC_BASE_DIR", os.path.expanduser("~/.fpc"))
-DATA_DIR = os.environ.get("FPC_DATA_DIR", os.path.join(BASE_DIR, "data"))
-SCRIPTS_DIR = os.environ.get("FPC_SCRIPTS_DIR", os.path.join(BASE_DIR, "scripts"))
+BASE_DIR = os.environ.get("AGORA_BASE_DIR", os.path.expanduser("~/.agora"))
+DATA_DIR = os.environ.get("AGORA_DATA_DIR", os.path.join(BASE_DIR, "data"))
+SCRIPTS_DIR = os.environ.get("AGORA_SCRIPTS_DIR", os.path.join(BASE_DIR, "scripts"))
 INBOX = os.environ.get("BUZZ_INBOX", os.path.join(DATA_DIR, f"buzz-inbox-{AGENT}.jsonl"))
 BUZZ_SK = os.environ.get("BUZZ_SK", "")
 CHANNEL = "7eb862af-f5a5-4f1a-9cea-0fb20322eeb8"

@@ -4,13 +4,13 @@
 # 无新消息 → 静默退出(零消耗)
 # 修复「webhook盲区: 无人说话=agent永远不醒」——最后一公里(收件箱→运行)
 
-AGENT="${FPC_AGENT:-agent1}"
+AGENT="${AGORA_AGENT:-agent1}"
 INBOX="${BUZZ_INBOX:-$HOME/.fpc/data/buzz-inbox-$AGENT.jsonl}"
 OFFSET_FILE="${BUZZ_INBOX_OFFSET:-$HOME/.fpc/data/buzz-inbox-$AGENT.offset}"
 LOCK="${BUZZ_INBOX_LOCK:-$HOME/.fpc/data/buzz-inbox-$AGENT.waking}"
 # 2026-09-08 D4收件箱统一（四方审计卡）：从 ~/.buzz-nostr/state/ 迁至 ~/.openclaw/data/（四方唯一目录）
 # 迁移逻辑：若新路径不存在且旧路径存在 → 合并旧文件内容到新路径（保历史·offset同名迁移）
-GATEWAY="${FPC_GATEWAY_URL:-http://127.0.0.1:18999}"  # 可覆写：测试指向死端口以免真实派发
+GATEWAY="${AGORA_GATEWAY_URL:-http://127.0.0.1:18999}"  # 可覆写：测试指向死端口以免真实派发
 
 # 收件箱不存在=从没收到过消息 → 静默
 [ -f "$INBOX" ] || exit 0
