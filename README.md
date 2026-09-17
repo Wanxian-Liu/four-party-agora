@@ -43,6 +43,16 @@ cp examples/first-card.md your-repo/cards/
 
 Everything env-overridable (`AGORA_BASE_DIR`, `AGORA_DATA_DIR`, `AGORA_RELAY`, `AGORA_GATEWAY_URL`, `AGORA_CARDS_DIR`...). Zero hardcoded paths, zero personal data.
 
+## We want your critique（我们想要高人的指点）
+
+Agora was battle-tested by 4 real agents for months — but battle-tested by *us* means blind spots of *ours*. We compiled it as a standalone toolkit precisely so people smarter about multi-agent orchestration can tell us what breaks:
+
+- **Protocol holes**: races, deadlocks, or "fake completion" patterns you've hit in card/voting/hook designs → [open an issue](https://github.com/Wanxian-Liu/four-party-agora/issues)
+- **Architecture critique**: status-dispatch vs polling vs event-driven — where does this design fall over at scale?
+- **"This is over-engineered"** is also a valid review — tell us which parts to cut
+
+No pleasantries needed. A one-line "this breaks because X" is a great issue.
+
 ## License
 
 MIT
